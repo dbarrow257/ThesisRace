@@ -1,0 +1,30 @@
+/data/t2k/dealtry/RAL_repoisitory/t2k/tdealtry/thesis/thesiscount
+
+a couple of aliases
+
+alias thesiscount='cd $RALREPO/tdealtry/thesis/thesiscount; renameshell thesiscount; ./countthesis.sh; tail thesiscount_tom.txt'
+
+alias thesiscountnow='$RALREPO/tdealtry/thesis/thesiscount/texcount.pl -inc -total -sum thesis.tex; tail -n 1 $RALREPO/tdealtry/thesis/thesiscount/thesiscount_tom.txt'
+
+alias thesiscount='cd /home/duffy/Thesis/ThesisRace; renameshell thesiscount; ./countthesis.sh; tail thesiscount_kirsty.txt'
+
+alias thesiscountnow='/home/duffy/Thesis/ThesisRace/texcount.pl -inc -total -sum /home/duffy/Thesis/thesismain.tex; tail -n 1 /home/duffy/Thesis/ThesisRace/thesiscount_kirsty.txt'
+
+it's currently setup for svn, but cvs commands are there commented out
+
+and git won't be too difficult to add
+
+And other things to change (from an old email from Abbey)
+
+You'll need to change this line:
+
+makecounts abbey contrib/waldron/thesis thesis.tex 2012-01-03
+
+the second argument is the path in the cvs repository where your thesis
+is, the third the main thesis file and the fourth the start date.  Also,
+in the same directory, you'll need to edit plot_thesis_count.C to make
+it read in your count and plot it, and maybe you want to copy the page
+in my public_html/plots directory so you get both plots on the same
+page.
+
+(I guess you could procrastinate by writing a README)
